@@ -1,0 +1,55 @@
+{
+    "name": "vladimir/slotegrator-test",
+    "description": "Test task PHP Developer",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "vladimir",
+            "email": "vtoropchinjob@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "doctrine/orm": "^2.8",
+        "illuminate/encryption": "^8.41",
+        "laminas/laminas-diactoros": "^2.5",
+        "league/oauth2-server": "^8.2",
+        "nikic/fast-route": "^1.3",
+        "php-di/php-di": "^6.3",
+        "symfony/console": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/dotenv": "^5.2",
+        "symfony/http-kernel": "^5.2",
+        "symfony/property-access": "^5.2",
+        "woohoolabs/harmony": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
