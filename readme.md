@@ -1,4 +1,11 @@
-Переименуйте `.env.example > .env`. Пропишите настройки. 
+Переименуйте `.env.example > .env`. Пропишите настройки.
+
+Установите зависимости `composer install`
+
+Синхронизируйте сущности доктрины с базой данных. Эта команда создаст все таблицы:
+```
+php vendor/doctrine/orm/bin/doctrine orm:schema-tool:update --force
+```
 
 Зарегистрируйте пользователя командой `php cli.php user:register`.
 
