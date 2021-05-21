@@ -1,3 +1,5 @@
+Переименуйте `.env.example > .env`. Пропишите настройки. 
+
 Зарегистрируйте пользователя командой `php cli.php user:register`.
 
 Добавьте призы `php cli.php prize:add`.
